@@ -1,13 +1,16 @@
 class Solution {
 public:
     long long countSubstrings(string s, char c) {
-        long long cnt=0,ans=0;
-        for(auto &it: s){
-            if(it==c){
-                cnt++;
-                ans+=cnt;
+        long long count = 0;
+        long long subString = 0;
+
+        for(char &ch : s){
+            if(ch == c){
+                subString += (1 + count);
+                count += 1;
             }
         }
-        return ans;
+
+        return subString;
     }
 };
