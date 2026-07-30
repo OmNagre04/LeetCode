@@ -7,7 +7,7 @@ public:
         for(char &ch : s){
             if(ch == c){
                 subString += (1 + count);
-                count += 1;
+                count++;
             }
         }
 
