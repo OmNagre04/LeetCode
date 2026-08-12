@@ -39,17 +39,20 @@ public:
         ListNode* first = head;
         ListNode* second = newHead;
 
+        bool isPal = true;
+
         while(newHead != NULL){
             if(head->val != newHead->val){
                 reverseLinkedList(newHead);
-                return false;
+                isPal = false;
+                break;
             } 
             head = head->next;
             newHead = newHead->next;
             
         }
         
-        // reverseLinkedList(newHead);
-        return true;
+        slow->next = reverseLinkedList(newHead);
+        return isPal;
     }
 };
