@@ -43,7 +43,7 @@ public:
 
         while(newHead != NULL){
             if(head->val != newHead->val){
-                reverseLinkedList(newHead);
+                // reverseLinkedList(newHead);
                 isPal = false;
                 break;
             } 
@@ -52,7 +52,7 @@ public:
             
         }
         
-        slow->next = reverseLinkedList(newHead);
+        // slow->next = reverseLinkedList(newHead);
         return isPal;
     }
 };
